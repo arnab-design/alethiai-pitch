@@ -1,55 +1,61 @@
 import { useState, useEffect, useCallback } from 'react'
 import './index.css'
 
-// Import all slides
+// Import all slides - REORDERED FOR PRE-SEED NARRATIVE
+// Core pitch (slides 1-10)
 import Slide01Title from './slides/Slide01Title'
-import Slide02Philosophy from './slides/Slide02Philosophy'
 import Slide03Problem from './slides/Slide03Problem'
 import Slide04Solution from './slides/Slide04Solution'
-import Slide05MarketContext from './slides/Slide05MarketContext'
-import Slide06ProductEcosystem from './slides/Slide06ProductEcosystem'
-import Slide07WedgeSolution from './slides/Slide07WedgeSolution'
+import Slide21MarketOpportunity from './slides/Slide21MarketOpportunity'  // Moved up: show market size early
+import Slide05MarketContext from './slides/Slide05MarketContext'  // Why Now
+import Slide06ProductEcosystem from './slides/Slide06ProductEcosystem'  // How It Works
+import Slide07WedgeSolution from './slides/Slide07WedgeSolution'  // Wedge strategy
+import Slide17Competition from './slides/Slide17Competition'  // Moved up: competitive advantage
 import Slide08Team from './slides/Slide08Team'
 import Slide09TheAsk from './slides/Slide09TheAsk'
 import Slide10ThankYou from './slides/Slide10ThankYou'
-import Slide11Sources from './slides/Slide11Sources'
-import Slide12AppendixDivider from './slides/Slide12AppendixDivider'
+
+// Appendix (detailed materials)
+import Slide12AppendixCover from './slides/Slide12AppendixCover'
+import Slide02Philosophy from './slides/Slide02Philosophy'  // Moved to appendix
 import Slide13ProductDeepDive from './slides/Slide13ProductDeepDive'
 import Slide14Architecture from './slides/Slide14Architecture'
 import Slide15Governance from './slides/Slide15Governance'
-import Slide16IP from './slides/Slide16IP'
-import Slide17Competitive from './slides/Slide17Competitive'
+import Slide16IPDefensibility from './slides/Slide16IPDefensibility'
 import Slide18Roadmap from './slides/Slide18Roadmap'
 import Slide19GTM from './slides/Slide19GTM'
 import Slide20Pricing from './slides/Slide20Pricing'
-import Slide21MarketOpportunity from './slides/Slide21MarketOpportunity'
 import Slide22Vision from './slides/Slide22Vision'
+import Slide11Sources from './slides/Slide11Sources'
 import Slide23Closing from './slides/Slide23Closing'
 
 const slides = [
-  Slide01Title,
-  Slide02Philosophy,
-  Slide03Problem,
-  Slide04Solution,
-  Slide05MarketContext,
-  Slide06ProductEcosystem,
-  Slide07WedgeSolution,
-  Slide08Team,
-  Slide09TheAsk,
-  Slide10ThankYou,
-  Slide11Sources,
-  Slide12AppendixDivider,
-  Slide13ProductDeepDive,
-  Slide14Architecture,
-  Slide15Governance,
-  Slide16IP,
-  Slide17Competitive,
-  Slide18Roadmap,
-  Slide19GTM,
-  Slide20Pricing,
-  Slide21MarketOpportunity,
-  Slide22Vision,
-  Slide23Closing,
+  // ===== CORE PITCH (10 slides) =====
+  Slide01Title,           // 1. Title
+  Slide03Problem,         // 2. Problem - immediate pain
+  Slide04Solution,        // 3. Solution - our answer
+  Slide21MarketOpportunity, // 4. Market - $12B TAM (establish size early)
+  Slide05MarketContext,   // 5. Why Now - timing
+  Slide06ProductEcosystem, // 6. How It Works
+  Slide07WedgeSolution,   // 7. Wedge - land and expand
+  Slide17Competition,     // 8. Competitive advantage
+  Slide08Team,            // 9. Team - why us
+  Slide09TheAsk,          // 10. The Ask - use of funds
+  Slide10ThankYou,        // 11. Thank You
+
+  // ===== APPENDIX =====
+  Slide12AppendixCover,   // 12. Appendix divider
+  Slide02Philosophy,      // 13. Philosophy (moved from early deck)
+  Slide13ProductDeepDive, // 14. Product details
+  Slide14Architecture,    // 15. Architecture
+  Slide15Governance,      // 16. Governance
+  Slide16IPDefensibility, // 17. IP defensibility
+  Slide18Roadmap,         // 18. Roadmap
+  Slide19GTM,             // 19. GTM
+  Slide20Pricing,         // 20. Pricing
+  Slide22Vision,          // 21. Vision
+  Slide11Sources,         // 22. Sources
+  Slide23Closing,         // 23. Closing
 ]
 
 function App() {
