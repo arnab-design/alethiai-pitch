@@ -1,65 +1,88 @@
 import React from 'react'
 
 function Slide20Pricing() {
-    const products = [
+    const pricing = [
         {
-            name: 'Origination',
-            price: '$100k/yr',
-            traditional: '$300k+/yr',
-            description: 'Subscription for pre-LOI screening'
+            phase: 'Origination',
+            solutions: 'Target Search Intelligence, Pre-LOI Risk Screening',
+            alethiPrice: '$100K/year',
+            traditionalPrice: '$400K/year',
+            advantage: '75%'
         },
         {
-            name: 'Deal Assurance',
-            price: '$150k/deal',
-            traditional: '$500k+/deal',
-            description: 'Per-transaction deep diligence'
+            phase: 'Deal Assurance',
+            solutions: 'Confirmatory Tech DD Report, Pre-Close Integration Blueprint',
+            alethiPrice: '$150K/deal',
+            traditionalPrice: '$600K/deal',
+            advantage: '75%'
         },
         {
-            name: 'Value Realization',
-            price: '$200k/yr',
-            traditional: '$600k+/yr',
-            description: 'Continuous post-deal monitoring'
+            phase: 'Value Realization',
+            solutions: 'Post-Close Integration Tracker, Compliance & Risk Monitoring',
+            alethiPrice: '$200K/year',
+            traditionalPrice: '$500K/year',
+            advantage: '60%'
         }
     ]
 
     return (
         <div className="slide-content">
-            <div className="text-center mb-48">
-                <span className="label mb-8" style={{ display: 'block' }}>Business & Pricing Model</span>
-                <h2 className="headline">60-75% Cost Advantage</h2>
+            <div className="text-center mb-24">
+                <h2 className="headline">
+                    <span className="highlight">Business Model</span> – Pricing & Revenue Design
+                </h2>
+                <p className="body-text mt-12" style={{ maxWidth: '800px', margin: '12px auto 0' }}>
+                    Alethi AI vs. Traditional Diligence pricing comparison
+                </p>
             </div>
 
-            <div className="grid-3">
-                {products.map((product, index) => (
-                    <div key={index} className="card" style={{ textAlign: 'center' }}>
-                        <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>{product.name}</h3>
-                        <p className="small-text mb-16" style={{ color: 'var(--color-text-secondary)' }}>
-                            {product.description}
-                        </p>
+            <div style={{ overflowX: 'auto' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <thead>
+                        <tr style={{ borderBottom: '2px solid var(--color-primary)' }}>
+                            <th style={{ padding: '14px 12px', textAlign: 'left', fontWeight: '700', fontSize: '14px' }}>Deal Phase</th>
+                            <th style={{ padding: '14px 12px', textAlign: 'left', fontWeight: '700', fontSize: '14px' }}>Alethi AI Solutions</th>
+                            <th style={{ padding: '14px 12px', textAlign: 'right', fontWeight: '700', fontSize: '14px', color: 'var(--color-primary)' }}>Alethi AI Pricing</th>
+                            <th style={{ padding: '14px 12px', textAlign: 'right', fontWeight: '700', fontSize: '14px', color: 'var(--color-text-secondary)' }}>Traditional Pricing</th>
+                            <th style={{ padding: '14px 12px', textAlign: 'center', fontWeight: '700', fontSize: '14px' }}>Cost Advantage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {pricing.map((row, index) => (
+                            <tr key={index} style={{ borderBottom: '1px solid var(--color-gray-200)' }}>
+                                <td style={{ padding: '16px 12px', fontWeight: '600', color: 'var(--color-primary)' }}>{row.phase}</td>
+                                <td style={{ padding: '16px 12px', fontSize: '13px', color: 'var(--color-text-secondary)' }}>{row.solutions}</td>
+                                <td style={{ padding: '16px 12px', textAlign: 'right', fontWeight: '700', color: 'var(--color-primary)', fontSize: '16px' }}>{row.alethiPrice}</td>
+                                <td style={{ padding: '16px 12px', textAlign: 'right', color: 'var(--color-text-secondary)', textDecoration: 'line-through' }}>{row.traditionalPrice}</td>
+                                <td style={{ padding: '16px 12px', textAlign: 'center' }}>
+                                    <span style={{
+                                        background: 'var(--color-primary)',
+                                        color: 'white',
+                                        padding: '4px 12px',
+                                        borderRadius: '12px',
+                                        fontWeight: '700',
+                                        fontSize: '14px'
+                                    }}>
+                                        {row.advantage}
+                                    </span>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
 
-                        <div style={{
-                            padding: '24px',
-                            background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%)',
-                            borderRadius: '12px',
-                            color: 'white',
-                            marginBottom: '16px'
-                        }}>
-                            <div style={{ fontSize: '28px', fontWeight: '800' }}>{product.price}</div>
-                            <div style={{ fontSize: '12px', opacity: 0.8 }}>Alethi AI</div>
-                        </div>
-
-                        <div style={{
-                            padding: '12px',
-                            background: 'var(--color-gray-100)',
-                            borderRadius: '8px',
-                            textDecoration: 'line-through',
-                            color: 'var(--color-text-light)'
-                        }}>
-                            <div style={{ fontSize: '16px' }}>{product.traditional}</div>
-                            <div style={{ fontSize: '11px' }}>Traditional</div>
-                        </div>
-                    </div>
-                ))}
+            <div style={{
+                borderLeft: '4px solid var(--color-primary)',
+                padding: '20px 24px',
+                background: 'var(--color-gray-100)',
+                borderRadius: '0 8px 8px 0',
+                maxWidth: '900px',
+                margin: '32px auto 0'
+            }}>
+                <p className="body-text" style={{ margin: 0 }}>
+                    Alethi AI delivers <strong>60-75% cost savings</strong> compared to traditional diligence while providing faster, more comprehensive coverage.
+                </p>
             </div>
         </div>
     )
