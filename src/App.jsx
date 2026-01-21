@@ -2,15 +2,16 @@ import { useState, useEffect, useCallback } from 'react'
 import './index.css'
 
 // Import all slides - REORDERED FOR PRE-SEED NARRATIVE
-// Core pitch (slides 1-10)
+// Core pitch (slides 1-12)
 import Slide01Title from './slides/Slide01Title'
 import Slide03Problem from './slides/Slide03Problem'
 import Slide04Solution from './slides/Slide04Solution'
-import Slide21MarketOpportunity from './slides/Slide21MarketOpportunity'  // Moved up: show market size early
+import Slide06HowItWorks from './slides/Slide06HowItWorks'  // NEW: Concrete input→output
+import Slide06bProductDemo from './slides/Slide06bProductDemo'  // NEW: Sample Vercel report
+import Slide21MarketOpportunity from './slides/Slide21MarketOpportunity'  // Market size
 import Slide05MarketContext from './slides/Slide05MarketContext'  // Why Now
-import Slide06ProductEcosystem from './slides/Slide06ProductEcosystem'  // How It Works
 import Slide07WedgeSolution from './slides/Slide07WedgeSolution'  // Wedge strategy
-import Slide17Competition from './slides/Slide17Competition'  // Moved up: competitive advantage
+import Slide17Competition from './slides/Slide17Competition'  // Competitive advantage
 import Slide08Team from './slides/Slide08Team'
 import Slide09TheAsk from './slides/Slide09TheAsk'
 import Slide10ThankYou from './slides/Slide10ThankYou'
@@ -30,18 +31,19 @@ import Slide11Sources from './slides/Slide11Sources'
 import Slide23Closing from './slides/Slide23Closing'
 
 const slides = [
-  // ===== CORE PITCH (10 slides) =====
+  // ===== CORE PITCH (12 slides) =====
   Slide01Title,           // 1. Title
   Slide03Problem,         // 2. Problem - immediate pain
   Slide04Solution,        // 3. Solution - our answer
-  Slide21MarketOpportunity, // 4. Market - $12B TAM (establish size early)
-  Slide05MarketContext,   // 5. Why Now - timing
-  Slide06ProductEcosystem, // 6. How It Works
-  Slide07WedgeSolution,   // 7. Wedge - land and expand
-  Slide17Competition,     // 8. Competitive advantage
-  Slide08Team,            // 9. Team - why us
-  Slide09TheAsk,          // 10. The Ask - use of funds
-  Slide10ThankYou,        // 11. Thank You
+  Slide06HowItWorks,      // 4. How It Works - domain → report flow
+  Slide06bProductDemo,    // 5. Product Demo - sample Vercel report
+  Slide21MarketOpportunity, // 6. Market - $12B TAM
+  Slide05MarketContext,   // 7. Why Now - timing
+  Slide07WedgeSolution,   // 8. Wedge - land and expand
+  Slide17Competition,     // 9. Competitive advantage
+  Slide08Team,            // 10. Team - why us
+  Slide09TheAsk,          // 11. The Ask - use of funds
+  Slide10ThankYou,        // 12. Thank You
 
   // ===== APPENDIX =====
   Slide12AppendixCover,   // 12. Appendix divider
