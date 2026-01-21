@@ -13,6 +13,7 @@ import Slide05MarketContext from './slides/Slide05MarketContext'  // Why Now
 import Slide07WedgeSolution from './slides/Slide07WedgeSolution'  // Wedge strategy
 import Slide17Competition from './slides/Slide17Competition'  // Competitive advantage
 import Slide08Team from './slides/Slide08Team'
+import Slide09bRoadmap from './slides/Slide09bRoadmap'  // NEW: 12-Month Plan
 import Slide09TheAsk from './slides/Slide09TheAsk'
 import Slide10ThankYou from './slides/Slide10ThankYou'
 
@@ -42,8 +43,9 @@ const slides = [
   Slide07WedgeSolution,   // 8. Wedge - land and expand
   Slide17Competition,     // 9. Competitive advantage
   Slide08Team,            // 10. Team - why us
-  Slide09TheAsk,          // 11. The Ask - use of funds
-  Slide10ThankYou,        // 12. Thank You
+  Slide09bRoadmap,        // 11. 12-Month Plan - what we deliver
+  Slide09TheAsk,          // 12. The Ask - use of funds
+  Slide10ThankYou,        // 13. Thank You
 
   // ===== APPENDIX =====
   Slide12AppendixCover,   // 12. Appendix divider
