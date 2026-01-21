@@ -5,10 +5,17 @@ function Slide08Team() {
     const team = [
         {
             name: 'Arnab Tagore',
-            role: 'CEO, Founder',
+            role: 'CEO',
             credentials: ['Ex-RBC Head of Data Engineering', '9+ years enterprise data at banks', 'U of Toronto'],
             linkedin: 'https://linkedin.com/in/arnabtagore',
             initials: 'AT'
+        },
+        {
+            name: 'James Kenyon-Brown',
+            role: 'CGO',
+            credentials: ['Ex-RBC Director Data Strategy ($15MM GenAI)', 'Ex-HSBC Global Equity Sales', 'MIT AI Strategy Certificate'],
+            linkedin: '#',
+            initials: 'JK'
         },
         {
             name: 'Saksham Chawla',
@@ -19,14 +26,14 @@ function Slide08Team() {
         },
         {
             name: 'Prakash Jawahar',
-            role: 'Head of Engineering',
+            role: 'Founding Engineer',
             credentials: ['Fannie Mae Software Engineer', 'Ex-Northrop Grumman, Hume Center', 'Virginia Tech CS'],
             linkedin: 'https://linkedin.com/in/prakash-jawahar',
             initials: 'PJ'
         },
         {
             name: 'Prithvi Iyer',
-            role: 'CPO',
+            role: 'Founding Engineer',
             credentials: ['AWS Certified ML Specialty', 'AWS Solutions Architect', 'Virginia Tech CS'],
             linkedin: 'https://linkedin.com/in/prithviiyerr',
             initials: 'PI'
@@ -51,8 +58,8 @@ function Slide08Team() {
                 gap: '24px',
                 marginBottom: '24px'
             }}>
-                {/* First row - 2 members */}
-                {team.slice(0, 2).map((member, index) => (
+                {/* First row - 3 members */}
+                {team.slice(0, 3).map((member, index) => (
                     <div key={index} style={{
                         textAlign: 'center',
                         width: '200px',
@@ -103,7 +110,7 @@ function Slide08Team() {
                 marginBottom: '24px'
             }}>
                 {/* Second row - 2 members */}
-                {team.slice(2, 4).map((member, index) => (
+                {team.slice(3, 5).map((member, index) => (
                     <div key={index} style={{
                         textAlign: 'center',
                         width: '200px',
@@ -156,7 +163,7 @@ function Slide08Team() {
                 margin: '0 auto'
             }}>
                 <p className="body-text" style={{ margin: 0, fontSize: '15px' }}>
-                    <strong>Combined experience:</strong> Enterprise data engineering at RBC, TD, TELUS + ML expertise from Georgia Tech + deep cloud/security skills with AWS certifications.
+                    <strong>Combined experience:</strong> Enterprise data at RBC, HSBC, Scotiabank + ML expertise from Georgia Tech + AWS certifications + MIT AI Strategy.
                 </p>
             </div>
         </div>
