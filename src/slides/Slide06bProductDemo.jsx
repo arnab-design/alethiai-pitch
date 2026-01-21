@@ -30,7 +30,7 @@ function Slide06bProductDemo() {
                     <span className="highlight">Sample Output</span> – Target Intelligence Report
                 </h2>
                 <p className="body-text mt-8" style={{ maxWidth: '600px', margin: '8px auto 0' }}>
-                    Real report generated for <strong>Vercel</strong> in ~4 hours from public signals only
+                    Real report generated for <strong>Vercel</strong> in ~1 hour from public signals only
                 </p>
             </div>
 
