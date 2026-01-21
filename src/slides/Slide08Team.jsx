@@ -6,37 +6,30 @@ function Slide08Team() {
         {
             name: 'Arnab Tagore',
             role: 'CEO, Founder',
-            credentials: ['Ex-McKinsey Digital', '15+ years enterprise data architecture', 'Led tech DD for $2B+ in transactions'],
-            linkedin: '#',
+            credentials: ['Ex-RBC Head of Data Engineering', '9+ years enterprise data at banks', 'U of Toronto'],
+            linkedin: 'https://linkedin.com/in/arnabtagore',
             initials: 'AT'
-        },
-        {
-            name: 'James Kenyon-Brown',
-            role: 'CGO',
-            credentials: ['Ex-Goldman Sachs', '10+ years investment banking', 'Originated $500M+ in deals'],
-            linkedin: '#',
-            initials: 'JK'
         },
         {
             name: 'Saksham Chawla',
             role: 'CTO',
-            credentials: ['Ex-Amazon AWS', 'Built systems at 100K+ TPS', 'Stanford CS'],
-            linkedin: '#',
+            credentials: ['Georgia Tech MS Machine Learning', 'Ex-FactSet, Navy CUI Challenge winner', 'Virginia Tech CS'],
+            linkedin: 'https://linkedin.com/in/schawla2',
             initials: 'SC'
         },
         {
-            name: 'Prakash Venkataraman',
-            role: 'Head of AI',
-            credentials: ['Ex-Google Research', 'Published 20+ ML papers', 'PhD Machine Learning'],
-            linkedin: '#',
-            initials: 'PV'
+            name: 'Prakash Jawahar',
+            role: 'Head of Engineering',
+            credentials: ['Fannie Mae Software Engineer', 'Ex-Northrop Grumman, Hume Center', 'Virginia Tech CS'],
+            linkedin: 'https://linkedin.com/in/prakash-jawahar',
+            initials: 'PJ'
         },
         {
-            name: 'Prithvi Sharma',
+            name: 'Prithvi Iyer',
             role: 'CPO',
-            credentials: ['Ex-Palantir', 'Shipped enterprise products at scale', 'IIT Delhi + Wharton MBA'],
-            linkedin: '#',
-            initials: 'PS'
+            credentials: ['AWS Certified ML Specialty', 'AWS Solutions Architect', 'Virginia Tech CS'],
+            linkedin: 'https://linkedin.com/in/prithviiyerr',
+            initials: 'PI'
         }
     ]
 
@@ -58,8 +51,8 @@ function Slide08Team() {
                 gap: '24px',
                 marginBottom: '24px'
             }}>
-                {/* First row - 3 members */}
-                {team.slice(0, 3).map((member, index) => (
+                {/* First row - 2 members */}
+                {team.slice(0, 2).map((member, index) => (
                     <div key={index} style={{
                         textAlign: 'center',
                         width: '200px',
@@ -110,7 +103,7 @@ function Slide08Team() {
                 marginBottom: '24px'
             }}>
                 {/* Second row - 2 members */}
-                {team.slice(3).map((member, index) => (
+                {team.slice(2, 4).map((member, index) => (
                     <div key={index} style={{
                         textAlign: 'center',
                         width: '200px',
@@ -163,7 +156,7 @@ function Slide08Team() {
                 margin: '0 auto'
             }}>
                 <p className="body-text" style={{ margin: 0, fontSize: '15px' }}>
-                    <strong>Combined experience:</strong> $2B+ in M&A transactions, 50+ years in enterprise tech, top-tier backgrounds from McKinsey, Goldman, Amazon, Google, and Palantir.
+                    <strong>Combined experience:</strong> Enterprise data engineering at RBC, TD, TELUS + ML expertise from Georgia Tech + deep cloud/security skills with AWS certifications.
                 </p>
             </div>
         </div>
