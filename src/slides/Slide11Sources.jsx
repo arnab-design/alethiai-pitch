@@ -1,46 +1,81 @@
 import React from 'react'
 
 function Slide11Sources() {
-    const sources = [
-        'PwC Global M&A Industry Trends Report 2024',
-        'Bain & Company Technology Due Diligence Study',
-        'McKinsey & Company: Creating Value from M&A',
-        'Gartner: Market Guide for IT Due Diligence',
-        'PitchBook: M&A Market Data and Analytics'
+    const categories = [
+        {
+            title: 'Market & Deal Activity',
+            sources: ['Refinitiv', 'Dealogic', 'Goldman Sachs', 'PitchBook']
+        },
+        {
+            title: 'Regulatory & Oversight',
+            sources: ['SEC', 'EU AI Act', 'DORA', 'GDPR']
+        },
+        {
+            title: 'Technology Intelligence',
+            sources: ['BuiltWith', 'Wappalyzer', 'Shodan', 'Censys']
+        },
+        {
+            title: 'Industry Research',
+            sources: ['Gartner', 'Forrester', 'McKinsey', 'Bain']
+        },
+        {
+            title: 'Technical Infrastructure',
+            sources: ['Datadog', 'AWS', 'Azure', 'GCP']
+        }
     ]
 
     return (
         <div className="slide-content">
-            <div className="text-center mb-48">
-                <span className="label mb-8" style={{ display: 'block' }}>References</span>
-                <h2 className="headline">Sources & References</h2>
+            <div className="text-center mb-32">
+                <h2 className="headline">
+                    <span className="highlight">Sources</span> & Market References
+                </h2>
             </div>
 
-            <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {sources.map((source, index) => (
-                        <li
-                            key={index}
-                            style={{
-                                padding: '16px 24px',
-                                borderBottom: index < sources.length - 1 ? '1px solid var(--color-gray-200)' : 'none',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '16px'
-                            }}
-                        >
-                            <span style={{
-                                color: 'var(--color-primary)',
-                                fontWeight: '600',
-                                fontSize: '14px',
-                                minWidth: '24px'
-                            }}>
-                                {index + 1}.
-                            </span>
-                            <span className="body-text" style={{ fontSize: '16px' }}>{source}</span>
-                        </li>
-                    ))}
-                </ul>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(5, 1fr)',
+                gap: '24px',
+                marginBottom: '48px'
+            }}>
+                {categories.map((category, index) => (
+                    <div key={index}>
+                        <h3 style={{
+                            fontSize: '14px',
+                            fontWeight: '700',
+                            color: 'var(--color-primary)',
+                            marginBottom: '12px',
+                            paddingBottom: '8px',
+                            borderBottom: '2px solid var(--color-primary)'
+                        }}>
+                            {category.title}
+                        </h3>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                            {category.sources.map((source, sIndex) => (
+                                <li key={sIndex} className="small-text" style={{
+                                    padding: '6px 0',
+                                    color: 'var(--color-text-secondary)'
+                                }}>
+                                    {source}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+
+            <div style={{
+                background: 'var(--color-gray-100)',
+                padding: '16px 24px',
+                borderRadius: '8px'
+            }}>
+                <p className="small-text" style={{
+                    color: 'var(--color-primary)',
+                    margin: 0,
+                    lineHeight: 1.6
+                }}>
+                    <strong>Disclaimer:</strong> This presentation contains forward-looking statements and market projections based on publicly available data and third-party research. Actual results may differ materially. All trademarks and company names are the property of their respective owners.
+                </p>
             </div>
         </div>
     )

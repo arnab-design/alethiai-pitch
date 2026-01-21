@@ -1,66 +1,82 @@
 import React from 'react'
 
 function Slide09TheAsk() {
+    const allocation = [
+        { category: 'Team', amount: 'USD 0.73M', percent: '73%', capability: 'Engineering, GTM, Operations' },
+        { category: 'Product Ops', amount: 'USD 0.15M', percent: '15%', capability: 'Infrastructure, Tools, Data' },
+        { category: 'Infrastructure', amount: 'USD 0.08M', percent: '8%', capability: 'Cloud, Security, Compliance' },
+        { category: 'Contingency', amount: 'USD 0.04M', percent: '4%', capability: 'Operating buffer' }
+    ]
+
+    const fundingEnables = [
+        { bold: '12-month runway', text: 'to achieve product-market fit' },
+        { bold: 'US/UK market launch', text: 'with focused go-to-market' },
+        { bold: 'LOI-backed pilot conversion', text: 'to paying customers' },
+        { bold: 'Seed proof points', text: 'for Series A positioning' }
+    ]
+
     return (
         <div className="slide-content">
-            <div className="text-center mb-48">
-                <span className="label mb-8" style={{ display: 'block' }}>The Ask</span>
+            <div className="text-center mb-32">
                 <h2 className="headline">
-                    Pre-Seed Funding & <span className="highlight">Use of Proceeds</span>
+                    <span className="highlight">The Ask</span> – Pre-Seed Funding & Use of Proceeds
                 </h2>
             </div>
 
-            <div className="grid-2" style={{ gap: '48px', alignItems: 'center' }}>
-                <div className="text-center">
-                    <div className="stat-value" style={{ fontSize: '72px' }}>$1.5M</div>
-                    <div className="stat-label">Pre-Seed Round</div>
-                </div>
-
+            <div className="grid-2" style={{ gap: '48px', alignItems: 'start' }}>
+                {/* Funding Enables */}
                 <div>
-                    <div className="funding-chart">
-                        <div className="funding-segment engineering">60%</div>
-                        <div className="funding-segment gtm">25%</div>
-                        <div className="funding-segment operations">15%</div>
-                    </div>
-
-                    <div style={{ display: 'grid', gap: '20px', marginTop: '32px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                            <div style={{ width: '16px', height: '16px', borderRadius: '4px', background: 'var(--color-primary)' }}></div>
-                            <div>
-                                <strong>Engineering (60%)</strong>
-                                <p className="small-text">Core platform development, AI infrastructure</p>
-                            </div>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                            <div style={{ width: '16px', height: '16px', borderRadius: '4px', background: 'var(--color-primary-dark)' }}></div>
-                            <div>
-                                <strong>GTM (25%)</strong>
-                                <p className="small-text">Sales, partnerships, customer success</p>
-                            </div>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                            <div style={{ width: '16px', height: '16px', borderRadius: '4px', background: 'var(--color-text-dark)' }}></div>
-                            <div>
-                                <strong>Operations (15%)</strong>
-                                <p className="small-text">Legal, compliance, administration</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="card mt-32" style={{ padding: '24px' }}>
-                        <h4 style={{ marginBottom: '12px', fontWeight: '600' }}>Key Milestones</h4>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
-                            <li className="small-text" style={{ padding: '8px 0', display: 'flex', gap: '8px' }}>
-                                <span style={{ color: 'var(--color-primary)' }}>→</span>
-                                US/UK market launch
+                    <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '20px', color: 'var(--color-primary)' }}>Funding Enables</h3>
+                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                        {fundingEnables.map((item, index) => (
+                            <li key={index} style={{
+                                padding: '12px 0',
+                                borderBottom: index < fundingEnables.length - 1 ? '1px solid var(--color-gray-200)' : 'none'
+                            }}>
+                                <strong>{item.bold}</strong> {item.text}
                             </li>
-                            <li className="small-text" style={{ padding: '8px 0', display: 'flex', gap: '8px' }}>
-                                <span style={{ color: 'var(--color-primary)' }}>→</span>
-                                LOI-backed pilot conversion
-                            </li>
-                        </ul>
-                    </div>
+                        ))}
+                    </ul>
                 </div>
+
+                {/* Allocation Table */}
+                <div>
+                    <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '20px', color: 'var(--color-primary)' }}>Allocation of Proceeds</h3>
+                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                        <thead>
+                            <tr style={{ borderBottom: '2px solid var(--color-gray-200)' }}>
+                                <th style={{ textAlign: 'left', padding: '12px 8px', fontSize: '13px', fontWeight: '600' }}>Category</th>
+                                <th style={{ textAlign: 'right', padding: '12px 8px', fontSize: '13px', fontWeight: '600' }}>Allocation</th>
+                                <th style={{ textAlign: 'left', padding: '12px 8px', fontSize: '13px', fontWeight: '600' }}>Capability Built</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {allocation.map((row, index) => (
+                                <tr key={index} style={{ borderBottom: '1px solid var(--color-gray-200)' }}>
+                                    <td style={{ padding: '12px 8px', fontSize: '14px', fontWeight: '500' }}>{row.category}</td>
+                                    <td style={{ padding: '12px 8px', fontSize: '14px', textAlign: 'right' }}>
+                                        <span style={{ fontWeight: '600' }}>{row.amount}</span>
+                                        <span style={{ color: 'var(--color-primary)', marginLeft: '8px' }}>({row.percent})</span>
+                                    </td>
+                                    <td style={{ padding: '12px 8px', fontSize: '13px', color: 'var(--color-text-secondary)' }}>{row.capability}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style={{
+                borderLeft: '4px solid var(--color-primary)',
+                padding: '20px 24px',
+                background: 'var(--color-gray-100)',
+                borderRadius: '0 8px 8px 0',
+                maxWidth: '900px',
+                margin: '32px auto 0'
+            }}>
+                <p className="body-text" style={{ margin: 0 }}>
+                    Pre-seed funding positions Alethi AI to <strong>demonstrate product-market fit</strong> and build the proof points required for Series A.
+                </p>
             </div>
         </div>
     )
