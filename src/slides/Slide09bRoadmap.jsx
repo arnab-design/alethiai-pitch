@@ -5,21 +5,21 @@ function Slide09bRoadmap() {
     const phases = [
         {
             name: 'BUILD',
-            months: ['Jan', 'Feb', 'Mar', 'Apr'],
+            months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
             color: 'var(--color-primary)',
             icon: Wrench,
             focus: 'Foundation'
         },
         {
             name: 'PROVE',
-            months: ['May', 'Jun', 'Jul', 'Aug'],
+            months: ['Jul', 'Aug', 'Sep'],
             color: '#F59E0B',
             icon: FlaskConical,
             focus: 'Validation'
         },
         {
             name: 'EXPAND',
-            months: ['Sep', 'Oct', 'Nov', 'Dec'],
+            months: ['Oct', 'Nov', 'Dec'],
             color: '#8B5CF6',
             icon: Rocket,
             focus: 'Scale'
@@ -29,12 +29,12 @@ function Slide09bRoadmap() {
     const milestones = [
         { month: 'Jan', items: ['Core agent framework', 'Engineering hires'] },
         { month: 'Feb', items: ['Pre-LOI screening MVP', 'Sales playbook'] },
-        { month: 'Mar', items: ['First pilot signed', 'SOC 2 prep begins'] },
-        { month: 'Apr', items: ['3 LOI-backed pilots', 'Advisory board'] },
+        { month: 'Mar', items: ['First pilot discussions', 'SOC 2 prep begins'] },
+        { month: 'Apr', items: ['Platform launch', 'Advisory board'] },
         { month: 'May', items: ['VDR integration', 'Pilot feedback loop'] },
-        { month: 'Jun', items: ['First paying customer', 'Case study #1'] },
+        { month: 'Jun', items: ['First pilot signed', 'Case study #1'] },
         { month: 'Jul', items: ['Benchmark engine', 'Sales hire'] },
-        { month: 'Aug', items: ['Second paying customer', 'Conference presence'] },
+        { month: 'Aug', items: ['First paying customer', 'Conference presence'] },
         { month: 'Sep', items: ['SOC 2 certification', 'UK market entry'] },
         { month: 'Oct', items: ['Post-close monitoring', 'Channel partner #1'] },
         { month: 'Nov', items: ['API ecosystem beta', 'Inbound marketing'] },
@@ -148,7 +148,7 @@ function Slide09bRoadmap() {
                             {phase.name} Outcome
                         </div>
                         <div style={{ fontSize: '13px', fontWeight: '700' }}>
-                            {i === 0 && '3 LOI-backed pilots'}
+                            {i === 0 && 'Production-ready platform'}
                             {i === 1 && 'First paying customers'}
                             {i === 2 && 'Series A ready + SOC 2'}
                         </div>
