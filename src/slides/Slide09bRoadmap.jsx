@@ -27,17 +27,17 @@ function Slide09bRoadmap() {
     ]
 
     const milestones = [
-        { month: 'Jan', items: ['Core agent framework', 'Engineering hires'] },
-        { month: 'Feb', items: ['Pre-LOI screening MVP', 'Sales playbook'] },
-        { month: 'Mar', items: ['First pilot discussions', 'SOC 2 prep begins'] },
-        { month: 'Apr', items: ['Platform launch', 'Advisory board'] },
-        { month: 'May', items: ['VDR integration', 'Pilot feedback loop'] },
-        { month: 'Jun', items: ['First pilot signed', 'Case study #1'] },
-        { month: 'Jul', items: ['Benchmark engine', 'Sales hire'] },
-        { month: 'Aug', items: ['First paying customer', 'Conference presence'] },
+        { month: 'Jan', items: ['✅ Core agent framework', '✅ FastAPI server live'] },
+        { month: 'Feb', items: ['✅ Stage 1 reports (28 insights)', '✅ 13+ company analyses'] },
+        { month: 'Mar', items: ['Multi-stage synthesizer', 'Pre-LOI (Stage 2) launch'] },
+        { month: 'Apr', items: ['Stages 3-4 integration', 'Platform UI v1'] },
+        { month: 'May', items: ['VDR integration', 'Pilot onboarding begins'] },
+        { month: 'Jun', items: ['First paying pilot', 'Case study #1'] },
+        { month: 'Jul', items: ['Post-close (Stage 5)', 'Benchmark engine'] },
+        { month: 'Aug', items: ['Compliance (Stage 6)', 'First paying customer'] },
         { month: 'Sep', items: ['SOC 2 certification', 'UK market entry'] },
-        { month: 'Oct', items: ['Post-close monitoring', 'Channel partner #1'] },
-        { month: 'Nov', items: ['API ecosystem beta', 'Inbound marketing'] },
+        { month: 'Oct', items: ['Full 6-stage platform', 'Channel partner #1'] },
+        { month: 'Nov', items: ['API ecosystem beta', 'Dashboard analytics'] },
         { month: 'Dec', items: ['Series A positioning', '$200K+ ARR target'] }
     ]
 
@@ -148,7 +148,7 @@ function Slide09bRoadmap() {
                             {phase.name} Outcome
                         </div>
                         <div style={{ fontSize: '13px', fontWeight: '700' }}>
-                            {i === 0 && 'Production-ready platform'}
+                            {i === 0 && 'Full 6-stage platform'}
                             {i === 1 && 'First paying customers'}
                             {i === 2 && 'Series A ready + SOC 2'}
                         </div>
