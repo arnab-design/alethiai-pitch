@@ -9,9 +9,9 @@ function Slide09bRoadmap() {
             color: 'var(--color-primary)',
             icon: Wrench,
             outcomes: [
-                'End-to-end technical diligence capability proven',
-                'Repeatable assessment system across 6 deal stages',
-                'Core IP defensibility established'
+                'Demonstrate end-to-end technical diligence capability',
+                'Establish repeatable assessment system across full deal lifecycle',
+                'Establish early IP defensibility'
             ]
         },
         {
@@ -20,9 +20,9 @@ function Slide09bRoadmap() {
             color: '#F59E0B',
             icon: FlaskConical,
             outcomes: [
-                'Paying pilots with PE/VC firms',
-                'AlethiAI integrated into live M&A workflows',
-                'Documented ROI: time saved, risks surfaced'
+                'Paid pilots with PE/VC firms',
+                'AlethiAI embedded into live M&A workflows',
+                'Documented ROI: time saved, risks surfaced, decision quality'
             ]
         },
         {
@@ -33,7 +33,7 @@ function Slide09bRoadmap() {
             outcomes: [
                 'Clear ICP and buyer persona validated',
                 'Evidence of repeatable demand',
-                'Defined what the Seed round scales'
+                'Clear articulation of what the Seed round scales'
             ]
         }
     ]
@@ -135,7 +135,7 @@ function Slide09bRoadmap() {
                 textAlign: 'center'
             }}>
                 <p style={{ margin: 0, fontSize: '15px', fontWeight: '500' }}>
-                    This pre-seed round validates our core thesis and unlocks a <strong>Seed round to scale</strong> proven demand.
+                    This pre-seed round validates our core thesis and unlocks a <strong>Seed round to scale</strong> demonstrated demand.
                 </p>
             </div>
         </div>
