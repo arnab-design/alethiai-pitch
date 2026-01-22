@@ -1,126 +1,121 @@
 import React from 'react'
-import { Wrench, FlaskConical, Rocket } from 'lucide-react'
+import { Wrench, FlaskConical, Target } from 'lucide-react'
 
 function Slide09bRoadmap() {
     const phases = [
         {
             name: 'BUILD',
-            months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            subtitle: 'Validation Infrastructure',
             color: 'var(--color-primary)',
             icon: Wrench,
-            focus: 'Foundation'
+            outcomes: [
+                'End-to-end technical diligence capability proven',
+                'Repeatable assessment system across 6 deal stages',
+                'Core IP defensibility established'
+            ]
         },
         {
             name: 'PROVE',
-            months: ['Jul', 'Aug', 'Sep'],
+            subtitle: 'Market Validation',
             color: '#F59E0B',
             icon: FlaskConical,
-            focus: 'Validation'
+            outcomes: [
+                'Paying pilots with PE/VC firms',
+                'AlethiAI integrated into live M&A workflows',
+                'Documented ROI: time saved, risks surfaced'
+            ]
         },
         {
-            name: 'EXPAND',
-            months: ['Oct', 'Nov', 'Dec'],
+            name: 'POSITION',
+            subtitle: 'Seed Readiness',
             color: '#8B5CF6',
-            icon: Rocket,
-            focus: 'Scale'
+            icon: Target,
+            outcomes: [
+                'Clear ICP and buyer persona validated',
+                'Evidence of repeatable demand',
+                'Defined what the Seed round scales'
+            ]
         }
     ]
-
-    const milestones = [
-        { month: 'Jan', items: ['✅ Core agent framework', '✅ FastAPI server live'] },
-        { month: 'Feb', items: ['✅ Stage 1 reports (28 insights)', '✅ 13+ company analyses'] },
-        { month: 'Mar', items: ['Multi-stage synthesizer', 'Pre-LOI (Stage 2) launch'] },
-        { month: 'Apr', items: ['Stages 3-4 integration', 'Platform UI v1'] },
-        { month: 'May', items: ['VDR integration', 'Pilot onboarding begins'] },
-        { month: 'Jun', items: ['First paying pilot', 'Case study #1'] },
-        { month: 'Jul', items: ['Post-close (Stage 5)', 'Benchmark engine'] },
-        { month: 'Aug', items: ['Compliance (Stage 6)', 'First paying customer'] },
-        { month: 'Sep', items: ['SOC 2 certification', 'UK market entry'] },
-        { month: 'Oct', items: ['Full 6-stage platform', 'Channel partner #1'] },
-        { month: 'Nov', items: ['API ecosystem beta', 'Dashboard analytics'] },
-        { month: 'Dec', items: ['Series A positioning', '$200K+ ARR target'] }
-    ]
-
-    const allMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-    const getPhaseForMonth = (month) => {
-        for (const phase of phases) {
-            if (phase.months.includes(month)) return phase
-        }
-        return phases[0]
-    }
 
     return (
         <div className="slide-content">
             <div className="text-center mb-16">
                 <h2 className="headline">
-                    <span className="highlight">12-Month Plan</span> – What We'll Deliver With $1M
+                    <span className="highlight">Pre-Seed Roadmap</span> – From Insight to Validation
                 </h2>
+                <p className="body-text" style={{ maxWidth: '700px', margin: '16px auto 0', opacity: 0.8 }}>
+                    How this capital converts into de-risking and unlocks the Seed round
+                </p>
             </div>
 
-            {/* Phase legend */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '20px' }}>
+            {/* Phase cards */}
+            <div style={{
+                display: 'flex',
+                gap: '24px',
+                justifyContent: 'center',
+                marginBottom: '40px'
+            }}>
                 {phases.map((phase, i) => {
                     const IconComponent = phase.icon
                     return (
-                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <div style={{
-                                width: '28px',
-                                height: '28px',
-                                borderRadius: '6px',
-                                background: phase.color,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}>
-                                <IconComponent size={14} color="white" />
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '13px', fontWeight: '700', color: phase.color }}>{phase.name}</div>
-                                <div style={{ fontSize: '10px', color: 'var(--color-text-secondary)' }}>{phase.focus}</div>
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-
-            {/* Timeline grid */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(12, 1fr)',
-                gap: '4px',
-                marginBottom: '16px'
-            }}>
-                {allMonths.map((month, i) => {
-                    const phase = getPhaseForMonth(month)
-                    const milestone = milestones.find(m => m.month === month)
-                    return (
                         <div key={i} style={{
+                            flex: 1,
+                            maxWidth: '320px',
                             background: 'var(--color-gray-100)',
-                            borderRadius: '8px',
-                            overflow: 'hidden'
+                            borderRadius: '12px',
+                            overflow: 'hidden',
+                            border: '1px solid var(--color-gray-200)'
                         }}>
-                            {/* Month header */}
+                            {/* Phase header */}
                             <div style={{
                                 background: phase.color,
                                 color: 'white',
-                                padding: '6px 4px',
-                                textAlign: 'center',
-                                fontSize: '11px',
-                                fontWeight: '700'
+                                padding: '16px 20px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px'
                             }}>
-                                {month}
+                                <div style={{
+                                    width: '36px',
+                                    height: '36px',
+                                    borderRadius: '8px',
+                                    background: 'rgba(255,255,255,0.2)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    <IconComponent size={20} color="white" />
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: '16px', fontWeight: '700' }}>{phase.name}</div>
+                                    <div style={{ fontSize: '12px', opacity: 0.9 }}>{phase.subtitle}</div>
+                                </div>
                             </div>
-                            {/* Milestones */}
-                            <div style={{ padding: '8px 6px', minHeight: '70px' }}>
-                                {milestone?.items.map((item, j) => (
+                            {/* Outcomes */}
+                            <div style={{ padding: '20px' }}>
+                                {phase.outcomes.map((outcome, j) => (
                                     <div key={j} style={{
-                                        fontSize: '8px',
-                                        marginBottom: '4px',
-                                        lineHeight: '1.3',
-                                        color: 'var(--color-text-dark)'
+                                        display: 'flex',
+                                        alignItems: 'flex-start',
+                                        gap: '10px',
+                                        marginBottom: j < phase.outcomes.length - 1 ? '12px' : 0
                                     }}>
-                                        • {item}
+                                        <div style={{
+                                            width: '6px',
+                                            height: '6px',
+                                            borderRadius: '50%',
+                                            background: phase.color,
+                                            marginTop: '6px',
+                                            flexShrink: 0
+                                        }} />
+                                        <div style={{
+                                            fontSize: '13px',
+                                            lineHeight: '1.4',
+                                            color: 'var(--color-text-dark)'
+                                        }}>
+                                            {outcome}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -129,43 +124,18 @@ function Slide09bRoadmap() {
                 })}
             </div>
 
-            {/* Key outcomes row */}
+            {/* Summary callout */}
             <div style={{
-                display: 'flex',
-                gap: '16px',
-                marginBottom: '16px'
+                background: 'linear-gradient(135deg, var(--color-primary) 0%, #059669 100%)',
+                color: 'white',
+                padding: '20px 32px',
+                borderRadius: '12px',
+                maxWidth: '800px',
+                margin: '0 auto',
+                textAlign: 'center'
             }}>
-                {phases.map((phase, i) => (
-                    <div key={i} style={{
-                        flex: 1,
-                        background: phase.color,
-                        color: 'white',
-                        padding: '12px 16px',
-                        borderRadius: '8px',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: '11px', opacity: 0.9, marginBottom: '4px' }}>
-                            {phase.name} Outcome
-                        </div>
-                        <div style={{ fontSize: '13px', fontWeight: '700' }}>
-                            {i === 0 && 'Full 6-stage platform'}
-                            {i === 1 && 'First paying customers'}
-                            {i === 2 && 'Series A ready + SOC 2'}
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <div style={{
-                borderLeft: '4px solid var(--color-primary)',
-                padding: '12px 16px',
-                background: 'var(--color-gray-100)',
-                borderRadius: '0 8px 8px 0',
-                maxWidth: '900px',
-                margin: '0 auto'
-            }}>
-                <p className="body-text" style={{ margin: 0, fontSize: '13px' }}>
-                    <strong>12 months of runway</strong> to achieve product-market fit and position for <strong>Series A at $3-5M</strong>.
+                <p style={{ margin: 0, fontSize: '15px', fontWeight: '500' }}>
+                    This pre-seed round validates our core thesis and unlocks a <strong>Seed round to scale</strong> proven demand.
                 </p>
             </div>
         </div>
