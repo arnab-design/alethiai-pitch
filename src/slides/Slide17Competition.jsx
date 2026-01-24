@@ -1,90 +1,126 @@
 import React from 'react'
-import { X, Check } from 'lucide-react'
+import { Check, Minus } from 'lucide-react'
 
 function Slide17Competition() {
-    const comparisons = [
+    const solutions = [
         {
-            dimension: 'Diligence Scope',
-            traditional: 'Manual spot checks',
-            alethi: 'Automated evidence capture'
+            name: 'Target Search Intelligence',
+            alethi: 'Automated, Independent',
+            services: 'Relationship-based',
+            signalTools: 'Signal-assisted',
+            opsTools: '—'
         },
         {
-            dimension: 'Target Visibility',
-            traditional: 'Restricted access',
-            alethi: 'Pre-engagement signals'
+            name: 'Preliminary Tech Diligence',
+            alethi: 'Automated, Non-notifying',
+            services: 'Target-notifying',
+            signalTools: 'Target-observable',
+            opsTools: '—'
         },
         {
-            dimension: 'Verification Logic',
-            traditional: 'Personal judgment',
-            alethi: 'Audit-grade verification'
+            name: 'Confirmatory Tech DD',
+            alethi: 'Automated, Audit-grade',
+            services: 'Questionnaire-based',
+            signalTools: '—',
+            opsTools: '—'
         },
         {
-            dimension: 'Engagement Speed',
-            traditional: 'Slow, labor-intensive',
-            alethi: 'Near-instant delivery'
+            name: 'Pre-Close Integration Blueprint',
+            alethi: 'Automated, Execution-ready',
+            services: 'Assumption-based',
+            signalTools: '—',
+            opsTools: '—'
         },
         {
-            dimension: 'Data Lifecycle',
-            traditional: 'Static reports',
-            alethi: 'Searchable intelligence assets'
+            name: 'Post-Close Integration Tracker',
+            alethi: 'Automated, Outcome-linked',
+            services: 'Self-reported',
+            signalTools: '—',
+            opsTools: 'Operational metrics'
+        },
+        {
+            name: 'Compliance & Risk Monitoring',
+            alethi: 'Automated, Continuous',
+            services: 'Periodic reviews',
+            signalTools: 'Fragmented alerts',
+            opsTools: 'System-scoped'
         }
     ]
 
+    const renderCell = (value, isAlethi = false) => {
+        if (value === '—') {
+            return <span style={{ color: '#9CA3AF' }}>—</span>
+        }
+        return (
+            <span style={{
+                color: isAlethi ? 'var(--color-primary)' : 'var(--color-text-secondary)',
+                fontWeight: isAlethi ? '600' : '400',
+                fontSize: '12px'
+            }}>
+                {value}
+            </span>
+        )
+    }
+
     return (
         <div className="slide-content">
-            <div className="text-center mb-24">
+            <div className="text-center mb-16">
                 <h2 className="headline">
-                    <span className="highlight">Competitive Advantage</span> – Structural Differentiation Across the Deal Lifecycle
+                    <span className="highlight">Competitive Advantage</span> – Differentiation Across the Deal Lifecycle
                 </h2>
+                <p className="body-text mt-12" style={{ maxWidth: '900px', margin: '12px auto 0', fontSize: '14px' }}>
+                    Traditional technology due diligence covers the deal lifecycle through <strong>fragmented services and point tools</strong>, but is not designed for automated, continuous verification of technology risk and value.
+                </p>
             </div>
 
-            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <div style={{ maxWidth: '950px', margin: '0 auto' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                     <thead>
-                        <tr>
-                            <th style={{ padding: '16px', textAlign: 'left', fontWeight: '700', borderBottom: '2px solid var(--color-gray-200)' }}></th>
-                            <th style={{ padding: '16px', textAlign: 'center', fontWeight: '700', borderBottom: '2px solid var(--color-gray-200)', color: 'var(--color-text-secondary)' }}>
-                                Traditional TD
-                            </th>
-                            <th style={{ padding: '16px', textAlign: 'center', fontWeight: '700', borderBottom: '2px solid var(--color-gray-200)', color: 'var(--color-primary)' }}>
-                                Alethi AI Assurance
-                            </th>
+                        <tr style={{ background: 'var(--color-gray-100)' }}>
+                            <th style={{ padding: '12px 8px', textAlign: 'left', fontWeight: '700', borderBottom: '2px solid var(--color-gray-200)' }}>Solution</th>
+                            <th style={{ padding: '12px 8px', textAlign: 'center', fontWeight: '700', borderBottom: '2px solid var(--color-primary)', color: 'var(--color-primary)', background: 'rgba(0,168,150,0.1)' }}>Alethi AI</th>
+                            <th style={{ padding: '12px 8px', textAlign: 'center', fontWeight: '600', borderBottom: '2px solid var(--color-gray-200)', color: 'var(--color-text-secondary)' }}>Services-Led Tech DD</th>
+                            <th style={{ padding: '12px 8px', textAlign: 'center', fontWeight: '600', borderBottom: '2px solid var(--color-gray-200)', color: 'var(--color-text-secondary)' }}>Tech Signal Tools</th>
+                            <th style={{ padding: '12px 8px', textAlign: 'center', fontWeight: '600', borderBottom: '2px solid var(--color-gray-200)', color: 'var(--color-text-secondary)' }}>Post-Close Ops Tools</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {comparisons.map((row, index) => (
+                        {solutions.map((row, index) => (
                             <tr key={index} style={{ borderBottom: '1px solid var(--color-gray-200)' }}>
-                                <td style={{ padding: '16px', fontWeight: '600' }}>{row.dimension}</td>
-                                <td style={{ padding: '16px', textAlign: 'center' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                                        <X size={16} color="#EF4444" />
-                                        <span style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>{row.traditional}</span>
-                                    </div>
-                                </td>
-                                <td style={{ padding: '16px', textAlign: 'center' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                                        <Check size={16} color="var(--color-primary)" />
-                                        <span style={{ color: 'var(--color-primary)', fontSize: '14px', fontWeight: '500' }}>{row.alethi}</span>
-                                    </div>
-                                </td>
+                                <td style={{ padding: '10px 8px', fontWeight: '500' }}>{row.name}</td>
+                                <td style={{ padding: '10px 8px', textAlign: 'center', background: 'rgba(0,168,150,0.05)' }}>{renderCell(row.alethi, true)}</td>
+                                <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderCell(row.services)}</td>
+                                <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderCell(row.signalTools)}</td>
+                                <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderCell(row.opsTools)}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
+
+                <div style={{ display: 'flex', gap: '24px', marginTop: '16px', fontSize: '11px', color: 'var(--color-text-secondary)' }}>
+                    <div><strong>Services-Led:</strong> Deloitte · EY · Accenture · AlixPartners · West Monroe</div>
+                    <div><strong>Signal Tools:</strong> BuiltWith · SimilarTech · HGI · StackShare · Wappalyzer</div>
+                    <div><strong>Ops Tools:</strong> Datadog · ServiceNow · Snyk · New Relic · Splunk</div>
+                </div>
             </div>
 
             <div style={{
-                borderLeft: '4px solid var(--color-primary)',
-                padding: '20px 24px',
-                background: 'var(--color-gray-100)',
-                borderRadius: '0 8px 8px 0',
+                background: 'linear-gradient(135deg, var(--color-primary) 0%, #059669 100%)',
+                color: 'white',
+                padding: '18px 24px',
+                borderRadius: '10px',
                 maxWidth: '900px',
-                margin: '32px auto 0'
+                margin: '20px auto 0',
+                textAlign: 'center'
             }}>
-                <p className="body-text" style={{ margin: 0 }}>
-                    Alethi AI replaces fragmented, subjective processes with <strong>automated, audit-grade assurance</strong> that scales across the entire deal lifecycle.
+                <p style={{ margin: 0, fontSize: '14px', fontWeight: '500' }}>
+                    Alethi AI replaces episodic, disclosure-dependent diligence with a <strong>continuous assurance layer</strong> that delivers independent, audit-grade, execution-ready technology verification from origination through to post-close operations.
                 </p>
             </div>
+
+            <p className="small-text text-center" style={{ marginTop: '12px', color: 'var(--color-text-secondary)' }}>
+                — = not designed to support this stage
+            </p>
         </div>
     )
 }

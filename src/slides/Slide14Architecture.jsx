@@ -9,9 +9,11 @@ function Slide14Architecture() {
                     <span className="highlight">Technology Architecture</span> – Enterprise-Grade System
                 </h2>
                 <p className="body-text mt-16" style={{ maxWidth: '900px', margin: '16px auto 0' }}>
-                    Alethi AI is built on <strong>decentralized, observable and traceable execution units</strong> and a <strong>centralized logic layer</strong>, ensuring every decision, rule, and action is documented, searchable and defensible.
+                    Alethi AI <strong>converts raw, observable evidence into attribute-level outcomes and consolidated insights</strong> using deterministic rules, isolation boundaries, and audit-grade traceability.
                 </p>
             </div>
+
+            <p className="label mb-16 text-center">Alethi AI Agentic Workflow Summary</p>
 
             {/* Architecture Diagram */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '40px', marginBottom: '24px' }}>

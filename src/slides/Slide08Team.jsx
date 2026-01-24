@@ -1,7 +1,7 @@
 import React from 'react'
 import { Linkedin } from 'lucide-react'
 
-import jkImage from '../assets/team/james.png'
+import jkImage from '../assets/team/james_updated.jpg'
 import atImage from '../assets/team/arnab.png'
 import scImage from '../assets/team/saksham.png'
 import pjImage from '../assets/team/prakash.png'
@@ -11,32 +11,52 @@ function Slide08Team() {
     const team = [
         {
             name: 'Arnab Tagore',
-            role: 'CEO',
-            credentials: ['10+ years enterprise data leadership', 'Led $100M+ data platforms at top banks', 'University of Toronto'],
+            role: 'CEO, Founder',
+            credentials: [
+                'Ex-Head of Data Engineering @ RBC',
+                'Architected $100M+ data ecosystems for 14M+ clients',
+                'Led Data Integration: HSBC & City National Bank M&A',
+                'Led AI regulatory infrastructure initiatives'
+            ],
             linkedin: 'https://linkedin.com/in/arnabtagore',
             initials: 'AT',
             image: atImage
         },
         {
             name: 'Saksham Chawla',
-            role: 'CTO',
-            credentials: ['Full Stack Engineer at General Dynamics', 'Ex-US Navy Software Engineer', '2nd-time founder (Ravelon)', 'Virginia Tech CS'],
+            role: 'CTO, Founder',
+            credentials: [
+                'Full Stack Engineer @ General Dynamics',
+                'Building Military AWS Automation Platforms',
+                'MS Machine Learning, Georgia Tech',
+                'Virginia Tech CS Alum'
+            ],
             linkedin: 'https://linkedin.com/in/schawla2',
             initials: 'SC',
             image: scImage
         },
         {
             name: 'James Kenyon-Brown',
-            role: 'CGO',
-            credentials: ['RBC Director, Data Strategy', 'Ex-HSBC Global Equity Sales', 'Hong Kong Polytechnic University'],
-            linkedin: '#',
+            role: 'CGO, Founder',
+            credentials: [
+                'Director, RBC Data Strategy & AI Council',
+                'Led Data Services Business Development',
+                'Ex-HSBC Global Equity Sales',
+                'Managed Strategic Cloud Partnerships'
+            ],
+            linkedin: 'https://linkedin.com/in/jameskenyonbrown',
             initials: 'JK',
             image: jkImage
         },
         {
             name: 'Prakash Jawahar',
             role: 'Founding Engineer',
-            credentials: ['Fannie Mae Software Engineer', 'Ex-Northrop Grumman, Hume Center', 'Virginia Tech CS'],
+            credentials: [
+                'Software Engineer @ Fannie Mae (Current)',
+                'Ex-Northrop Grumman (Defense)',
+                'Hume Center: Underwater Cyber & Boeing 5G IoT Resiliency',
+                'Virginia Tech CS Alum'
+            ],
             linkedin: 'https://linkedin.com/in/prakash-jawahar',
             initials: 'PJ',
             image: pjImage
@@ -44,7 +64,12 @@ function Slide08Team() {
         {
             name: 'Prithvi Iyer',
             role: 'Founding Engineer',
-            credentials: ['ML Engineer', 'AWS Certified ML Specialty', '2nd-time founder (Ravelon)', 'Virginia Tech CS'],
+            credentials: [
+                'ML Engineer @ Plateau Grp (Current)',
+                'MS Machine Learning, Georgia Tech',
+                'AWS Certified Machine Learning Specialist',
+                'Virginia Tech CS Alum'
+            ],
             linkedin: 'https://linkedin.com/in/prithviiyerr',
             initials: 'PI',
             image: piImage
@@ -55,7 +80,7 @@ function Slide08Team() {
         <div className="slide-content">
             <div className="text-center mb-24">
                 <h2 className="headline">
-                    <span className="highlight">Team</span> – Operators Who've Done This Before
+                    <span className="highlight">Team</span> – Operators who’ve done this before
                 </h2>
                 <p className="body-text mt-12" style={{ maxWidth: '700px', margin: '12px auto 0' }}>
                     Built by founders with <strong>direct experience</strong> in M&A technology, enterprise systems, and machine learning.
@@ -113,12 +138,12 @@ function Slide08Team() {
                                 <div key={i} style={{
                                     fontSize: '11px',
                                     color: 'var(--color-text-secondary)',
-                                    padding: '3px 0',
+                                    padding: '2px 0',
                                     display: 'flex',
                                     alignItems: 'flex-start',
                                     gap: '6px'
                                 }}>
-                                    <span style={{ color: 'var(--color-primary)', fontWeight: '700' }}>•</span>
+                                    <span style={{ color: 'var(--color-primary)', fontWeight: '700', marginTop: '2px' }}>•</span>
                                     {cred}
                                 </div>
                             ))}
@@ -136,7 +161,7 @@ function Slide08Team() {
                 margin: '0 auto'
             }}>
                 <p className="body-text" style={{ margin: 0, fontSize: '15px' }}>
-                    <strong>Combined experience:</strong> Enterprise data at RBC, HSBC, Scotiabank + ML expertise from Georgia Tech + AWS certifications + MIT AI Strategy.
+                    Alethi AI is built by an operator-led founding team with the engineering depth to <strong>deliver audit-grade technology assurance at enterprise scale.</strong>
                 </p>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../components/Logo'
 import { Globe, Mail } from 'lucide-react'
 
 function Slide10ThankYou() {
@@ -25,53 +24,59 @@ function Slide10ThankYou() {
                 borderRadius: '100% 0 0 0'
             }} />
 
-            <div style={{ position: 'relative', zIndex: 1 }}>
+            <div style={{ position: 'relative', zIndex: 1, paddingTop: '40px' }}>
                 <h2 style={{
-                    fontSize: '56px',
+                    fontSize: '64px',
                     fontWeight: '800',
                     color: 'var(--color-primary)',
                     marginBottom: '24px',
-                    letterSpacing: '2px'
+                    letterSpacing: '4px'
                 }}>
                     THANK YOU
                 </h2>
 
-                <p className="body-text mb-48" style={{ fontWeight: '600', maxWidth: '600px', margin: '0 auto 48px' }}>
+                <p className="body-text" style={{ fontWeight: '600', maxWidth: '700px', margin: '0 auto 16px', fontSize: '18px' }}>
                     Alethi AI delivers automated assurance for technology due diligence in M&A
                 </p>
 
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '48px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <p className="body-text mb-48" style={{ color: 'var(--color-text-secondary)', maxWidth: '600px', margin: '0 auto 64px' }}>
+                    Built for investors and advisors who need defensible technology insight at deal speed
+                </p>
+
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '64px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                         <div style={{
-                            width: '48px',
-                            height: '48px',
+                            width: '56px',
+                            height: '56px',
                             borderRadius: '50%',
                             background: 'var(--color-primary)',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            boxShadow: '0 4px 6px rgba(0, 168, 150, 0.2)'
                         }}>
-                            <Globe color="white" size={24} />
+                            <Globe color="white" size={28} />
                         </div>
-                        <a href="https://www.alethi.ai/" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500' }}>
-                            https://www.alethi.ai/
+                        <a href="https://www.alethiai.com/" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '600', fontSize: '18px' }}>
+                            https://www.alethiai.com/
                         </a>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                         <div style={{
-                            width: '48px',
-                            height: '48px',
+                            width: '56px',
+                            height: '56px',
                             borderRadius: '50%',
                             background: 'var(--color-primary)',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            boxShadow: '0 4px 6px rgba(0, 168, 150, 0.2)'
                         }}>
-                            <Mail color="white" size={24} />
+                            <Mail color="white" size={28} />
                         </div>
-                        <a href="mailto:admin@alethi.ai" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '500' }}>
-                            admin@alethi.ai
+                        <a href="mailto:admin@alethiai.com" style={{ color: 'var(--color-text-dark)', textDecoration: 'none', fontWeight: '600', fontSize: '18px' }}>
+                            admin@alethiai.com
                         </a>
                     </div>
                 </div>

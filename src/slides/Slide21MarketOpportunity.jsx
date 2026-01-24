@@ -1,103 +1,134 @@
 import React from 'react'
 
 function Slide21MarketOpportunity() {
+    const tamItems = [
+        { name: 'Tech Diligence & Risk Assessment', value: '~$5B' },
+        { name: 'Integration Readiness & Execution Oversight', value: '~$4B' },
+        { name: 'Ongoing Tech Risk & Compliance Monitoring', value: '~$3B' }
+    ]
+
+    const samItems = [
+        { name: 'Technology Diligence & Risk Screening', value: '~$1.6B' },
+        { name: 'M&A-Linked Technology Integration', value: '~$0.3B' },
+        { name: 'Post-Close Technology Risk Monitoring', value: '~$0.1B' }
+    ]
+
+    const somItems = [
+        { name: 'Mid-Market PE Tech Deals', value: '~$70M' },
+        { name: 'Advisor-Activated Deal Flow', value: '~$20M' },
+        { name: 'Corporate Development Tech Acquisitions', value: '~$10M' }
+    ]
+
     return (
         <div className="slide-content">
-            <div className="text-center mb-32">
+            <div className="text-center mb-24">
                 <h2 className="headline">
                     <span className="highlight">Market Opportunity</span> – TAM, SAM, SOM
                 </h2>
                 <p className="body-text mt-16" style={{ maxWidth: '900px', margin: '16px auto 0' }}>
-                    Technology assurance is a <strong>~$12B global market</strong> driven by M&A activity, regulatory requirements, and the increasing role of technology in enterprise value creation.
+                    Technology assurance is a <strong>~$12B global market</strong> spanning diligence, integration, and post-close risk across increasingly complex M&A transactions.
                 </p>
             </div>
 
             <div style={{
                 display: 'flex',
                 justifyContent: 'center',
-                alignItems: 'flex-end',
-                gap: '48px',
-                marginBottom: '32px'
+                gap: '24px',
+                marginBottom: '24px'
             }}>
                 {/* TAM */}
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ flex: 1, maxWidth: '280px' }}>
                     <div style={{
-                        width: '200px',
-                        height: '200px',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, rgba(0,168,150,0.15) 0%, rgba(0,168,150,0.3) 100%)',
-                        border: '3px solid var(--color-primary)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto 16px'
+                        background: 'var(--color-primary)',
+                        color: 'white',
+                        padding: '16px',
+                        borderRadius: '12px 12px 0 0',
+                        textAlign: 'center'
                     }}>
-                        <div style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', letterSpacing: '2px' }}>TAM</div>
-                        <div style={{ fontSize: '42px', fontWeight: '800', color: 'var(--color-primary)' }}>~$12B</div>
+                        <div style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>TAM $12B</div>
+                        <div style={{ fontSize: '11px', opacity: 0.9 }}>Total Addressable Category</div>
                     </div>
-                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', maxWidth: '180px', margin: '0 auto' }}>
-                        Full tech deal assurance, M&A risk, and audit
-                    </p>
+                    <div style={{ padding: '4px', background: 'var(--color-primary)', borderRadius: '0 0 12px 12px' }}>
+                        <div style={{ background: 'white', borderRadius: '8px', padding: '12px' }}>
+                            <p style={{ fontSize: '12px', color: 'var(--color-primary)', fontWeight: '600', marginBottom: '12px' }}>Global M&A Tech Assurance</p>
+                            {tamItems.map((item, i) => (
+                                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '6px', color: 'var(--color-text-secondary)' }}>
+                                    <span>{item.name}</span>
+                                    <span style={{ fontWeight: '600' }}>{item.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
                 {/* SAM */}
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ flex: 1, maxWidth: '280px' }}>
                     <div style={{
-                        width: '160px',
-                        height: '160px',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, rgba(0,168,150,0.2) 0%, rgba(0,168,150,0.4) 100%)',
-                        border: '3px solid var(--color-primary)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto 16px'
+                        background: 'var(--color-primary)',
+                        color: 'white',
+                        padding: '16px',
+                        borderRadius: '12px 12px 0 0',
+                        textAlign: 'center'
                     }}>
-                        <div style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', letterSpacing: '2px' }}>SAM</div>
-                        <div style={{ fontSize: '36px', fontWeight: '800', color: 'var(--color-primary)' }}>~$4B</div>
+                        <div style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>SAM $2B</div>
+                        <div style={{ fontSize: '11px', opacity: 0.9 }}>Serviceable Available Market</div>
                     </div>
-                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', maxWidth: '180px', margin: '0 auto' }}>
-                        Mid-Market and Enterprise PE tech diligence globally
-                    </p>
+                    <div style={{ padding: '4px', background: 'var(--color-primary)', borderRadius: '0 0 12px 12px' }}>
+                        <div style={{ background: 'white', borderRadius: '8px', padding: '12px' }}>
+                            <p style={{ fontSize: '12px', color: 'var(--color-primary)', fontWeight: '600', marginBottom: '12px' }}>NA + EU Tech Transactions (Automatable)</p>
+                            {samItems.map((item, i) => (
+                                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '6px', color: 'var(--color-text-secondary)' }}>
+                                    <span>{item.name}</span>
+                                    <span style={{ fontWeight: '600' }}>{item.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
                 {/* SOM */}
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ flex: 1, maxWidth: '280px' }}>
                     <div style={{
-                        width: '120px',
-                        height: '120px',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, rgba(0,168,150,0.3) 0%, rgba(0,168,150,0.6) 100%)',
-                        border: '3px solid var(--color-primary)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto 16px'
+                        background: 'var(--color-primary)',
+                        color: 'white',
+                        padding: '16px',
+                        borderRadius: '12px 12px 0 0',
+                        textAlign: 'center'
                     }}>
-                        <div style={{ fontSize: '12px', fontWeight: '600', color: 'var(--color-primary)', letterSpacing: '2px' }}>SOM</div>
-                        <div style={{ fontSize: '28px', fontWeight: '800', color: 'var(--color-primary)' }}>$250M</div>
+                        <div style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>SOM $100M</div>
+                        <div style={{ fontSize: '11px', opacity: 0.9 }}>Serviceable Obtainable Market</div>
                     </div>
-                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', maxWidth: '180px', margin: '0 auto' }}>
-                        Initial capture in US mid-market and tech-heavy portcos
-                    </p>
+                    <div style={{ padding: '4px', background: 'var(--color-primary)', borderRadius: '0 0 12px 12px' }}>
+                        <div style={{ background: 'white', borderRadius: '8px', padding: '12px' }}>
+                            <p style={{ fontSize: '12px', color: 'var(--color-primary)', fontWeight: '600', marginBottom: '12px' }}>Near-Term Capturable Buyers (36 months)</p>
+                            {somItems.map((item, i) => (
+                                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '6px', color: 'var(--color-text-secondary)' }}>
+                                    <span>{item.name}</span>
+                                    <span style={{ fontWeight: '600' }}>{item.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div style={{
-                borderLeft: '4px solid var(--color-primary)',
-                padding: '20px 24px',
-                background: 'var(--color-gray-100)',
-                borderRadius: '0 8px 8px 0',
+                background: 'linear-gradient(135deg, var(--color-primary) 0%, #059669 100%)',
+                color: 'white',
+                padding: '18px 24px',
+                borderRadius: '10px',
                 maxWidth: '900px',
-                margin: '0 auto'
+                margin: '0 auto',
+                textAlign: 'center'
             }}>
-                <p className="body-text" style={{ margin: 0 }}>
-                    Alethi AI targets the <strong>mid-market PE technology diligence segment</strong>, with expansion into broader M&A and regulatory compliance verticals.
+                <p style={{ margin: 0, fontSize: '14px', fontWeight: '500' }}>
+                    Alethi AI targets a <strong>~$2B automatable serviceable market today</strong>, with a <strong>~$100M near-term entry opportunity</strong> driven by PE, advisors, and corporate development teams.
                 </p>
             </div>
+
+            <p className="small-text text-center" style={{ marginTop: '12px', color: 'var(--color-text-secondary)', fontSize: '10px' }}>
+                Sources: Goldman Sachs; Dealogic; S&P Global / MSCI; SEC; EU AI Act; DORA; FTC / DOJ.
+            </p>
         </div>
     )
 }

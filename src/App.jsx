@@ -7,6 +7,7 @@ import Slide01Title from './slides/Slide01Title'
 import Slide03Problem from './slides/Slide03Problem'
 import Slide04Solution from './slides/Slide04Solution'
 import Slide06HowItWorks from './slides/Slide06HowItWorks'  // NEW: Concrete input→output
+import Slide06ProductEcosystem from './slides/Slide06ProductEcosystem' // NEW: Unifying Workflows
 import Slide06bProductDemo from './slides/Slide06bProductDemo'  // NEW: Sample Vercel report
 import Slide21MarketOpportunity from './slides/Slide21MarketOpportunity'  // Market size
 import Slide05MarketContext from './slides/Slide05MarketContext'  // Why Now
@@ -32,20 +33,21 @@ import Slide11Sources from './slides/Slide11Sources'
 import Slide23Closing from './slides/Slide23Closing'
 
 const slides = [
-  // ===== CORE PITCH (12 slides) =====
+  // ===== CORE PITCH (13 slides) =====
   Slide01Title,           // 1. Title
   Slide03Problem,         // 2. Problem - immediate pain
   Slide04Solution,        // 3. Solution - our answer
   Slide06HowItWorks,      // 4. How It Works - domain → report flow
   Slide06bProductDemo,    // 5. Product Demo - sample Vercel report
-  Slide21MarketOpportunity, // 6. Market - $12B TAM
-  Slide05MarketContext,   // 7. Why Now - timing
-  Slide07WedgeSolution,   // 8. Wedge - land and expand
-  Slide17Competition,     // 9. Competitive advantage
-  Slide08Team,            // 10. Team - why us
-  Slide09bRoadmap,        // 11. 12-Month Plan - what we deliver
-  Slide09TheAsk,          // 12. The Ask - use of funds
-  Slide10ThankYou,        // 13. Thank You
+  Slide07WedgeSolution,   // 6. Wedge Strategy - land with 'Preliminary Tech Diligence'
+  Slide06ProductEcosystem,// 7. Product Vision - unifying the workflow
+  Slide21MarketOpportunity, // 8. Market - $12B TAM
+  Slide05MarketContext,   // 9. Why Now - timing
+  Slide17Competition,     // 10. Competitive advantage
+  Slide08Team,            // 11. Team - why us
+  Slide09bRoadmap,        // 12. 12-Month Plan - what we deliver
+  Slide09TheAsk,          // 13. The Ask - use of funds
+  Slide10ThankYou,        // 14. Thank You
 
   // ===== APPENDIX =====
   Slide12AppendixCover,   // 12. Appendix divider
@@ -63,12 +65,50 @@ const slides = [
 ]
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  // Initialize state from URL hash
+  const getInitialSlide = () => {
+    const hash = window.location.hash
+    const match = hash.match(/#slide-(\d+)/)
+    if (match) {
+      const slideIndex = parseInt(match[1], 10) - 1
+      if (slideIndex >= 0 && slideIndex < slides.length) {
+        return slideIndex
+      }
+    }
+    return 0
+  }
+
+  const [currentSlide, setCurrentSlide] = useState(getInitialSlide)
+
+  // Update URL hash when slide changes
+  const updateHash = (index) => {
+    window.location.hash = `#slide-${index + 1}`
+  }
 
   const goToSlide = useCallback((index) => {
     if (index >= 0 && index < slides.length) {
       setCurrentSlide(index)
+      updateHash(index)
     }
+  }, [])
+
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash
+      const match = hash.match(/#slide-(\d+)/)
+      if (match) {
+        const slideIndex = parseInt(match[1], 10) - 1
+        if (slideIndex >= 0 && slideIndex < slides.length) {
+          setCurrentSlide(slideIndex)
+        }
+      } else if (hash === '') {
+        setCurrentSlide(0)
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
   const nextSlide = useCallback(() => {

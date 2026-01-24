@@ -4,8 +4,9 @@
    CSS Custom Properties
    ============================================ */
 :root {
-  /* Colors */
-  --color-primary: #00A896;
+  /* Colors - Matched to PPTX Visual (Teal/Cyan) */
+  --color-primary: #00A99D;
+  /* Actual teal from PPTX slides */
   --color-primary-light: #00BFA6;
   --color-primary-dark: #008C7A;
   --color-background: #FFFFFF;
@@ -13,13 +14,16 @@
   --color-text-secondary: #4A4A68;
   --color-text-light: #6B6B8C;
   --color-accent: #00D4AA;
+  /* Light teal accent */
+  --color-accent-orange: #E97132;
+  --color-accent-green: #196B24;
   --color-gray-100: #F7F7F9;
-  --color-gray-200: #E8E8EE;
+  --color-gray-200: #E8E8E8;
   --color-gray-300: #D1D1DB;
 
-  /* Typography */
-  --font-heading: 'Calibri', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Calibri', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography - Clean sans-serif matching PPTX */
+  --font-heading: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
   --slide-padding: 60px;

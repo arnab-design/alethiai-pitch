@@ -9,9 +9,11 @@ function Slide04Solution() {
                     <span className="highlight">Solution</span> – Alethi AI's Automated Technology Assurance
                 </h2>
                 <p className="body-text mt-16" style={{ maxWidth: '900px', margin: '16px auto 0' }}>
-                    Acquirers and investors need <strong>faster, more dependable insight</strong> to <strong>price assets accurately</strong> and <strong>reduce deal and integration risk</strong>.
+                    M&A teams <strong>need faster, more dependable insight into target technology</strong> to price assets accurately, accelerate transaction execution, and materially reduce deal and integration risk.
                 </p>
             </div>
+
+            <p className="label mb-16 text-center">What Alethi AI enables</p>
 
             <div className="grid-3 mb-32">
                 <div className="card" style={{ background: '#F7F7F9', textAlign: 'center' }}>
@@ -27,9 +29,15 @@ function Slide04Solution() {
                     }}>
                         <Zap color="white" size={32} />
                     </div>
-                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '3px', marginBottom: '12px', color: 'var(--color-primary)' }}>FASTER DECISIONS</h3>
+                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '2px', marginBottom: '12px', color: 'var(--color-primary)' }}>FASTER DECISIONS</h3>
+                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', marginBottom: '8px' }}>
+                        <em>Remove weeks of delays</em>
+                    </p>
+                    <p style={{ fontSize: '24px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                        10–20x faster
+                    </p>
                     <p className="small-text" style={{ color: 'var(--color-text-secondary)' }}>
-                        <span style={{ color: 'var(--color-primary)', fontWeight: '600' }}>Weeks of delay are removed</span> as automated evidence collection accelerates diligence cycles.
+                        (48-hour delivery)<br />vs traditional tech DD
                     </p>
                 </div>
 
@@ -46,9 +54,15 @@ function Slide04Solution() {
                     }}>
                         <FileCheck color="white" size={32} />
                     </div>
-                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '3px', marginBottom: '12px', color: 'var(--color-primary)' }}>PRICING CONVICTION</h3>
+                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '2px', marginBottom: '12px', color: 'var(--color-primary)' }}>PRICING CONVICTION</h3>
+                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', marginBottom: '8px' }}>
+                        <em>Verified risk clarity</em>
+                    </p>
+                    <p style={{ fontSize: '24px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                        100% evidence-linked
+                    </p>
                     <p className="small-text" style={{ color: 'var(--color-text-secondary)' }}>
-                        <span style={{ color: 'var(--color-primary)', fontWeight: '600' }}>Risks are identified earlier</span> with data-driven assessments that quantify technology exposure.
+                        assurance<br />vs qualitative DD
                     </p>
                 </div>
 
@@ -65,9 +79,15 @@ function Slide04Solution() {
                     }}>
                         <TrendingDown color="white" size={32} />
                     </div>
-                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '3px', marginBottom: '12px', color: 'var(--color-primary)' }}>LOWER COSTS</h3>
+                    <h3 style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '2px', marginBottom: '12px', color: 'var(--color-primary)' }}>LOWER COSTS</h3>
+                    <p className="small-text" style={{ color: 'var(--color-text-secondary)', marginBottom: '8px' }}>
+                        <em>Reduce diligence supplier spend</em>
+                    </p>
+                    <p style={{ fontSize: '24px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                        ~4x lower cost
+                    </p>
                     <p className="small-text" style={{ color: 'var(--color-text-secondary)' }}>
-                        <span style={{ color: 'var(--color-primary)', fontWeight: '600' }}>Diligence spend decreases</span> as automated workflows reduce specialist dependency.
+                        vs traditional DD
                     </p>
                 </div>
             </div>
@@ -81,7 +101,7 @@ function Slide04Solution() {
                 margin: '0 auto'
             }}>
                 <p className="body-text" style={{ margin: 0 }}>
-                    Alethi AI delivers <strong>automated, defensible technology assurance</strong> that enables faster decisions, accurate pricing, and reduced risk.
+                    Alethi AI delivers <strong>automated, defensible technology assurance</strong> that consolidates evidence, streamlines assessment, and enables faster decisions, stronger valuations, and lower lifecycle costs.
                 </p>
             </div>
         </div>

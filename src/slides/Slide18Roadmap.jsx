@@ -2,29 +2,35 @@ import React from 'react'
 
 function Slide18Roadmap() {
     const phases = [
-        { name: 'Build', period: 'Q1-Q2 2026', color: 'var(--color-primary)' },
-        { name: 'Prove', period: 'Q3 2026', color: '#F59E0B' },
-        { name: 'Expand', period: 'Q4 2026', color: '#8B5CF6' }
-    ]
-
-    const categories = [
         {
-            name: 'Product & Platform',
-            build: ['Core agent framework', 'Pre-LOI screening MVP', 'SOC 2 compliance'],
-            prove: ['VDR integration', 'Benchmark engine', 'Customer feedback loop'],
-            expand: ['Post-close monitoring', 'API ecosystem', 'Enterprise features']
+            name: 'Build',
+            subtitle: 'Product validation',
+            color: 'var(--color-primary)',
+            items: [
+                'Demonstrate end-to-end technical diligence capability',
+                'Establish repeatable assessment system across full deal lifecycle',
+                'Establish early IP defensibility and compliance readiness'
+            ]
         },
         {
-            name: 'Go-To-Market',
-            build: ['Sales playbook', 'Partner outreach', 'Website & content'],
-            prove: ['Pilot conversions', 'Case studies', 'Conference presence'],
-            expand: ['Channel partnerships', 'UK market entry', 'Inbound marketing']
+            name: 'Prove',
+            subtitle: 'Market validation',
+            color: '#F59E0B',
+            items: [
+                'Paid pilots with PE/VC firms',
+                'AlethiAI embedded into live M&A workflows',
+                'Documented ROI: time saved, risks surfaced, decision quality'
+            ]
         },
         {
-            name: 'Team & Operations',
-            build: ['Engineering hires', 'Advisory board', 'Legal/finance setup'],
-            prove: ['Sales hire', 'Customer success', 'Process documentation'],
-            expand: ['Seed proof points', 'Series A prep', 'Team expansion planning']
+            name: 'Position',
+            subtitle: 'Seed Readiness',
+            color: '#8B5CF6',
+            items: [
+                'Clear ICP and buyer persona validated',
+                'Evidence of repeatable demand',
+                'Clear articulation of what the Seed round scales'
+            ]
         }
     ]
 
@@ -32,80 +38,60 @@ function Slide18Roadmap() {
         <div className="slide-content">
             <div className="text-center mb-24">
                 <h2 className="headline">
-                    <span className="highlight">Roadmap</span> – Execution Plan
+                    <span className="highlight">Roadmap</span> – Pre-Seed Execution Plan
                 </h2>
-                <p className="body-text mt-12" style={{ maxWidth: '800px', margin: '12px auto 0' }}>
-                    Execution over the <strong>next 12 months</strong> requires coordinated progress across product, go-to-market, and operations.
+                <p className="body-text mt-12" style={{ maxWidth: '900px', margin: '12px auto 0' }}>
+                    Execution over the next 12 months <strong>requires coordinated progress across product, go-to-market, and operations</strong> to reach production readiness and repeatable adoption.
                 </p>
             </div>
 
-            <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '800px' }}>
-                    <thead>
-                        <tr>
-                            <th style={{ padding: '12px 16px', textAlign: 'left', background: 'var(--color-primary)', color: 'white', fontWeight: '700' }}></th>
-                            {phases.map((phase, i) => (
-                                <th key={i} style={{
-                                    padding: '12px 16px',
-                                    textAlign: 'center',
-                                    background: phase.color,
-                                    color: 'white',
-                                    fontWeight: '700'
-                                }}>
-                                    <div>{phase.name}</div>
-                                    <div style={{ fontSize: '12px', fontWeight: '400', opacity: 0.9 }}>{phase.period}</div>
-                                </th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {categories.map((category, rowIndex) => (
-                            <tr key={rowIndex} style={{ borderBottom: '1px solid var(--color-gray-200)' }}>
-                                <td style={{
-                                    padding: '16px',
-                                    fontWeight: '700',
-                                    background: 'var(--color-gray-100)',
-                                    color: 'var(--color-primary)'
-                                }}>
-                                    {category.name}
-                                </td>
-                                <td style={{ padding: '12px', verticalAlign: 'top' }}>
-                                    <ul style={{ margin: 0, paddingLeft: '16px' }}>
-                                        {category.build.map((item, i) => (
-                                            <li key={i} className="small-text" style={{ marginBottom: '4px' }}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </td>
-                                <td style={{ padding: '12px', verticalAlign: 'top' }}>
-                                    <ul style={{ margin: 0, paddingLeft: '16px' }}>
-                                        {category.prove.map((item, i) => (
-                                            <li key={i} className="small-text" style={{ marginBottom: '4px' }}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </td>
-                                <td style={{ padding: '12px', verticalAlign: 'top' }}>
-                                    <ul style={{ margin: 0, paddingLeft: '16px' }}>
-                                        {category.expand.map((item, i) => (
-                                            <li key={i} className="small-text" style={{ marginBottom: '4px' }}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', marginBottom: '32px' }}>
+                {phases.map((phase, index) => (
+                    <div key={index} style={{
+                        flex: 1,
+                        maxWidth: '280px',
+                        background: 'var(--color-gray-100)',
+                        borderRadius: '12px',
+                        overflow: 'hidden'
+                    }}>
+                        <div style={{
+                            background: phase.color,
+                            color: 'white',
+                            padding: '16px',
+                            textAlign: 'center'
+                        }}>
+                            <div style={{ fontSize: '20px', fontWeight: '700' }}>{phase.name}</div>
+                            <div style={{ fontSize: '13px', opacity: 0.9 }}>{phase.subtitle}</div>
+                        </div>
+                        <div style={{ padding: '16px' }}>
+                            <ul style={{ margin: 0, paddingLeft: '20px' }}>
+                                {phase.items.map((item, i) => (
+                                    <li key={i} style={{
+                                        fontSize: '13px',
+                                        marginBottom: '10px',
+                                        color: 'var(--color-text-secondary)',
+                                        lineHeight: '1.4'
+                                    }}>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
             </div>
 
             <div style={{
-                borderLeft: '4px solid var(--color-primary)',
-                padding: '16px 20px',
-                background: 'var(--color-gray-100)',
-                borderRadius: '0 8px 8px 0',
+                background: 'linear-gradient(135deg, var(--color-primary) 0%, #059669 100%)',
+                color: 'white',
+                padding: '18px 24px',
+                borderRadius: '10px',
                 maxWidth: '900px',
-                margin: '24px auto 0'
+                margin: '0 auto',
+                textAlign: 'center'
             }}>
-                <p className="body-text" style={{ margin: 0, fontSize: '14px' }}>
-                    Each phase builds on the previous, creating <strong>proof points for Series A</strong> funding.
+                <p style={{ margin: 0, fontSize: '14px', fontWeight: '500' }}>
+                    This <strong>pre-seed validates traction and unlocks Seed scale</strong> – strengthening delivery, expanding evidence coverage, and scaling with confidence.
                 </p>
             </div>
         </div>

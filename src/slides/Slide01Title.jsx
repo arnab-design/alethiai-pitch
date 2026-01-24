@@ -42,10 +42,9 @@ function Slide01Title() {
                     fontWeight: '700',
                     lineHeight: 1.2,
                     color: 'var(--color-primary)',
-                    marginBottom: '24px',
-                    textTransform: 'uppercase'
+                    marginBottom: '24px'
                 }}>
-                    Automated Assurance for Technology Due Diligence in M&A
+                    <em>Technology Intelligence</em> That Closes Deals
                 </h1>
 
                 <p className="body-text" style={{ fontSize: '18px', color: 'var(--color-text-secondary)' }}>

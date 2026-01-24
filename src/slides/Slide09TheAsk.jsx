@@ -3,33 +3,36 @@ import { Target, DollarSign, Shield, Rocket } from 'lucide-react'
 
 function Slide09TheAsk() {
     const allocation = [
-        { category: 'Team', amount: '$730K', percent: '73%', capability: 'Engineering, GTM, Operations' },
-        { category: 'Product & Ops', amount: '$150K', percent: '15%', capability: 'Infrastructure, Tooling, Data' },
-        { category: 'Infrastructure & Security', amount: '$80K', percent: '8%', capability: 'Cloud, Compliance Foundations' },
-        { category: 'Contingency', amount: '$40K', percent: '4%', capability: 'Operating buffer' }
+        { category: 'Team', amount: '$730K', percent: '73%', capability: 'Engineering & product execution' },
+        { category: 'GTM', amount: '$150K', percent: '15%', capability: 'Pilots, Client onboarding' },
+        { category: 'Infrastructure', amount: '$80K', percent: '8%', capability: 'Cloud, automation, security' },
+        { category: 'Contingency', amount: '$50K', percent: '4%', capability: 'Operating buffer' }
     ]
 
-    const milestones = [
-        { milestone: '3 LOI-backed pilots', why: 'Demand validation', icon: Target },
-        { milestone: 'First paid customer', why: 'Revenue signal', icon: DollarSign },
-        { milestone: 'Enterprise security posture', why: 'SOC 2 in progress', icon: Shield },
-        { milestone: 'Clear Seed-round narrative', why: 'Next round positioning', icon: Rocket }
+    const outcomes = [
+        { text: 'Multiple pilot partners in live M&A workflows', icon: Target },
+        { text: 'At least one paid customer validating demand', icon: DollarSign },
+        { text: 'Highest-value wedge confirmed', icon: Shield },
+        { text: 'Seed plan defined: scope, milestones, scale path', icon: Rocket }
     ]
 
     return (
         <div className="slide-content">
             <div className="text-center mb-24">
                 <h2 className="headline">
-                    <span className="highlight">The Ask</span> – $1M Pre-Seed to Market Validation
+                    <span className="highlight">The Ask</span> – $1M Pre-Seed
                 </h2>
+                <p className="body-text mt-12" style={{ maxWidth: '900px', margin: '12px auto 0', fontSize: '14px' }}>
+                    Alethi AI is raising <strong>US$1M in pre-seed funding</strong> to scale go-to-market via Pre-LOI Risk Screening while bringing the full six-module diligence lifecycle to production with evidence-linked assurance.
+                </p>
             </div>
 
             <div className="grid-2" style={{ gap: '40px', alignItems: 'start' }}>
-                {/* 12-Month Validation Milestones */}
+                {/* Validation Outcomes */}
                 <div>
-                    <h3 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '16px', color: 'var(--color-primary)' }}>12-Month Validation Milestones</h3>
+                    <h3 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '16px', color: 'var(--color-primary)' }}>Validation Outcomes</h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        {milestones.map((item, index) => {
+                        {outcomes.map((item, index) => {
                             const IconComponent = item.icon
                             return (
                                 <div key={index} style={{
@@ -54,8 +57,7 @@ function Slide09TheAsk() {
                                         <IconComponent size={18} color="white" />
                                     </div>
                                     <div style={{ flex: 1 }}>
-                                        <div style={{ fontWeight: '600', fontSize: '14px' }}>{item.milestone}</div>
-                                        <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }}>{item.why}</div>
+                                        <div style={{ fontWeight: '600', fontSize: '14px' }}>{item.text}</div>
                                     </div>
                                 </div>
                             )
@@ -65,7 +67,10 @@ function Slide09TheAsk() {
 
                 {/* Allocation Table */}
                 <div>
-                    <h3 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '16px', color: 'var(--color-primary)' }}>Use of Proceeds</h3>
+                    <h3 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '8px', color: 'var(--color-primary)' }}>Use of Proceeds</h3>
+                    <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', marginBottom: '16px', fontStyle: 'italic' }}>
+                        Capital is allocated to maximize learning velocity and shorten time to market validation.
+                    </p>
                     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                         <thead>
                             <tr style={{ borderBottom: '2px solid var(--color-gray-200)' }}>
@@ -114,7 +119,7 @@ function Slide09TheAsk() {
                 textAlign: 'center'
             }}>
                 <p style={{ margin: 0, fontSize: '14px', fontWeight: '500' }}>
-                    This funding provides <strong>~12 months of runway</strong> to convert pilots into paying customers and clearly position the company for a <strong>Seed round</strong>.
+                    This raise provides approximately <strong>12 months of runway</strong> to convert LOI-backed pilots into repeatable buyer adoption, validate demand through paid customer conversion, and deliver the execution evidence required for a high-conviction Seed round.
                 </p>
             </div>
         </div>

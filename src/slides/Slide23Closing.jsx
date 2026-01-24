@@ -45,7 +45,7 @@ function Slide23Closing() {
                     color: 'var(--color-text-secondary)',
                     lineHeight: 1.8
                 }}>
-                    <strong>Disclaimer:</strong> This document is provided for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. The information contained herein is confidential and proprietary to Alethi AI and may not be reproduced, distributed, or disclosed without the prior written consent of Alethi AI. All projections, estimates, and forward-looking statements are based on current expectations and are subject to change.
+                    This document is provided exclusively for informational purposes and does not constitute an offer, commitment, or recommendation. <strong>Confidential</strong> – redistribution is prohibited without formal authorization from Alethi AI.
                 </p>
             </div>
         </div>
