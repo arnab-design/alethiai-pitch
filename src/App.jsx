@@ -16,6 +16,7 @@ import Slide17Competition from './slides/Slide17Competition'  // Competitive adv
 import Slide08Team from './slides/Slide08Team'
 import Slide09bRoadmap from './slides/Slide09bRoadmap'  // NEW: 12-Month Plan
 import Slide09TheAsk from './slides/Slide09TheAsk'
+import SlideInteractiveFinancials from './slides/SlideInteractiveFinancials' // NEW: Interactive Model
 import Slide10ThankYou from './slides/Slide10ThankYou'
 
 // Appendix (detailed materials)
@@ -47,7 +48,8 @@ const slides = [
   Slide08Team,            // 11. Team - why us
   Slide09bRoadmap,        // 12. 12-Month Plan - what we deliver
   Slide09TheAsk,          // 13. The Ask - use of funds
-  Slide10ThankYou,        // 14. Thank You
+  SlideInteractiveFinancials, // 14. Interactive Financial Model
+  Slide10ThankYou,        // 15. Thank You
 
   // ===== APPENDIX =====
   Slide12AppendixCover,   // 12. Appendix divider

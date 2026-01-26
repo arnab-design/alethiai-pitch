@@ -6,7 +6,7 @@ function Slide20Pricing() {
             phase: 'Origination',
             solutions: 'Target Search Intelligence / Pre-LOI Risk Screening',
             alethiPrice: '$100K / year',
-            alethiNote: '(includes 5 seats)',
+            alethiNote: '(1 Deal Team / 5 seats)',
             traditionalPrice: '$400K / year',
             traditionalNote: '(tools + advisory overlays)',
             advantage: '75%'
@@ -14,18 +14,18 @@ function Slide20Pricing() {
         {
             phase: 'Deal Assurance',
             solutions: 'Confirmatory Tech DD Report / Pre-Close Integration Blueprint',
-            alethiPrice: '$150K / deal',
-            alethiNote: '(includes 5 seats)',
-            traditionalPrice: '$600K / deal',
+            alethiPrice: '$50K / deal',
+            alethiNote: '(1 Deal Team / 5 seats)',
+            traditionalPrice: '$200K / deal',
             traditionalNote: '(consultant-led Tech DD)',
             advantage: '75%'
         },
         {
             phase: 'Value Realization',
             solutions: 'Post-Close Integration Tracker / Compliance & Risk Monitoring',
-            alethiPrice: '$200K / year',
-            alethiNote: '(includes 5 seats)',
-            traditionalPrice: '$450K / year',
+            alethiPrice: '$100K / year',
+            alethiNote: '(1 Deal Team / 5 seats)',
+            traditionalPrice: '$250K / year',
             traditionalNote: '(ops tools + advisory support)',
             advantage: '60%'
         }

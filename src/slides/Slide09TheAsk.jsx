@@ -3,10 +3,10 @@ import { Target, DollarSign, Shield, Rocket } from 'lucide-react'
 
 function Slide09TheAsk() {
     const allocation = [
-        { category: 'Team', amount: '$730K', percent: '73%', capability: 'Engineering & product execution' },
-        { category: 'GTM', amount: '$150K', percent: '15%', capability: 'Pilots, Client onboarding' },
-        { category: 'Infrastructure', amount: '$80K', percent: '8%', capability: 'Cloud, automation, security' },
-        { category: 'Contingency', amount: '$50K', percent: '4%', capability: 'Operating buffer' }
+        { category: 'Team', amount: '$775K', percent: '78%', capability: 'Engineering & product execution' },
+        { category: 'GTM', amount: '$100K', percent: '10%', capability: 'Pilots, Client onboarding' },
+        { category: 'Infrastructure', amount: '$75K', percent: '7%', capability: 'Cloud, automation, security' },
+        { category: 'Contingency', amount: '$50K', percent: '5%', capability: 'Operating buffer' }
     ]
 
     const outcomes = [

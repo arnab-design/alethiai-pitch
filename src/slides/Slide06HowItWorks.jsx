@@ -4,7 +4,7 @@ import { Globe, Lock, Zap, Search, Shield, FileCheck, GitBranch, Activity, Scale
 function Slide06HowItWorks() {
     const publicIntelModules = [
         { name: 'Target Search Intelligence', desc: 'Profile search & filtering', icon: Search },
-        { name: 'Preliminary Tech Diligence', desc: 'External signal analysis', icon: Shield }
+        { name: 'Pre LOI Risk Diligence', desc: 'External signal analysis', icon: Shield }
     ]
 
     const deepDiligenceModules = [
@@ -128,7 +128,7 @@ function Slide06HowItWorks() {
                         </div>
                         <div>
                             <div style={{ fontSize: '17px', fontWeight: '700' }}>Deep Diligence</div>
-                            <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }}>With private data access</div>
+                            <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }}>Permissioned systems access</div>
                         </div>
                     </div>
 

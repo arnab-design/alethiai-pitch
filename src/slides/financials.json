@@ -1,0 +1,44 @@
+{
+  "totalRaise": 1000000,
+  "team": [
+    {
+      "id": 1,
+      "role": "Arnab",
+      "salary": 10833,
+      "startMonth": 1
+    },
+    {
+      "id": 2,
+      "role": "Saksham",
+      "salary": 10833,
+      "startMonth": 12
+    },
+    {
+      "id": 3,
+      "role": "Jimmy",
+      "salary": 10833,
+      "startMonth": 1
+    },
+    {
+      "id": 4,
+      "role": "Prakash",
+      "salary": 10833,
+      "startMonth": 1
+    },
+    {
+      "id": 5,
+      "role": "Prithvi",
+      "salary": 10833,
+      "startMonth": 1
+    }
+  ],
+  "legalAdminSpend": 3000,
+  "softwarePerHead": 150,
+  "securityCompliance": 4000,
+  "travelSalesSpend": 1000,
+  "marketingSpend": 5000,
+  "equipmentCost": 3000,
+  "burdenRate": 25,
+  "infraBase": 2000,
+  "infraGrowth": 500
+}
